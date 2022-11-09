@@ -1,5 +1,7 @@
 package fr.efrei;
 
+import static org.junit.jupiter.api.Assertions.*;
+
 import org.junit.jupiter.api.Test;
 
 public class CalculatorTest{
@@ -20,5 +22,6 @@ public class CalculatorTest{
 
     Calculator test = new Calculator(auto);
     
+    assertThrows(UnauthorizedAccessException.class,() -> test.divide(2,2));
   }
 }
